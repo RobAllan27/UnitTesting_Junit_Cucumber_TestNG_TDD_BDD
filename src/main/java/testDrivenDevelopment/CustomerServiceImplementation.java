@@ -3,24 +3,42 @@ package testDrivenDevelopment;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * @author Rob
+ * A basic customer service implementation of the customer service interface
+ */
+
 public class CustomerServiceImplementation implements CustomerService {
 	public Customer createNewCustomer(Customer inCustomer) {
 		// real implementation will insert data to database.
 		return inCustomer;
 		
-	}
+	}	
 
+	/**
+	 * A method to allow a customer to be updated. 
+	 * In this case a simple implementation to update the name
+	 * @return a reference to the updated customer
+	 */
 	public Customer updateCustomer(Customer inCustomer) {
 		// real implementation would update the customer
 		inCustomer.setName("Rob Allan");
 		return inCustomer;
 	}
 
+	
+	/**
+	 * @return a boolean to indicate that the customer had been deleted
+	 */
 	public boolean removeCustomer(Customer inCustomer) {
 		//	real implementation would delete the customer
 		return true;	
 	}
-
+	
+	/** This method returns a notional set of transactions for a customer
+	 * @return a set of transactions for a customer.
+	 * 
+	*/
 	public List<Transaction> listAllTransactions(Customer inCustomer) {
 		// real implementation would get data from a database
 		List<Transaction> listOfAllTransactions = new ArrayList<Transaction>();
@@ -42,11 +60,6 @@ public class CustomerServiceImplementation implements CustomerService {
 		listOfAllTransactions.add(trans1);
 		listOfAllTransactions.add(trans2);
 		listOfAllTransactions.add(trans3);
-		/*
-		listOfAllTransactions.add(new Transaction());
-		listOfAllTransactions.add(new Transaction());
-		listOfAllTransactions.add(new Transaction());
-		*/
 		inCustomer.setTransactions(listOfAllTransactions);
 		
 		return listOfAllTransactions;
