@@ -10,7 +10,7 @@ public interface CustomerService {
 
 	
   /** An interface to return a basic customer 
- * @param customer
+ * @param customer - the new customer who has been created and passed to the service
  * @return the created customer
  */
 public Customer createNewCustomer(Customer customer);

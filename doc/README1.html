@@ -1,0 +1,48 @@
+<html>
+<head>
+<title>README
+</title>
+</head>
+<body>
+<A>
+This is some overview information for this package from Rob Allan - used for training
+
+<p>The accompanying code for presentations that Rob Allan is providing around testing. This git cover three areas -&nbsp; simple Junit, a use case where TDD could be applied, and then interrupting the user during test execution.</p>
+<h2 style="tab-stops: 36.0pt;">Part 1 Overview Simple Case</h2>
+<p>JUnit is a unit testing framework to write repeatable tests. JUnit contains many annotations that are used while creating test cases.</p>
+<p>Some of the most basic annotations are as below.</p>
+<ul>
+<li><em>@BeforeClass</em>: It is used to write code that we want to run before all test cases.</li>
+<li><em>@Before</em>: It will run before every test case.</li>
+<li><em>@Test</em>: This is actual test case.</li>
+<li><em>@After</em>: It will run after every test case.</li>
+<li><em>@AfterClass</em>: It is used to write code that we want to run after all test cases.</li>
+</ul>
+<p>&nbsp;</p>
+<p>The first example shows an example of a basic set of tests cases using basic annotations. The case shows a two charging implementations, extending a charging interface. Separate test cases exist for each case, with annotations for the lifecycle cases above. A test suite exists as shown below. The outputs of the 2 classes implementing the interfaces is then tested.</p>
+<p>See the package simplegeneratedjunittestcases</p>
+<p>&nbsp;</p>
+<h2 style="tab-stops: 36.0pt;">Part 2 More Complex Case and TDD Process</h2>
+<p>The second example shows a case of Test Driven Development, where the test cases are defined prior to the code. In this case a typical development cycle may be</p>
+<ul>
+<li style="text-indent: -18.0pt;">an interface is defined first</li>
+<li style="text-indent: -18.0pt;">then a test case to exercise the interface</li>
+<li style="text-indent: -18.0pt;">a rudimentary failed class (without implementation)</li>
+<li style="text-indent: -18.0pt;">a test case is then run</li>
+</ul>
+<p>&nbsp;</p>
+<p>The model chosen here is a customer, who has a set of transactions associated with them. There is a customerService interface and a customerServiceImplementation of that interface.</p>
+<p>&nbsp;</p>
+<p>The test methods also show the use of Java Streams to filter through a set of transactions and show the right values are returned.</p>
+<p>&nbsp;</p>
+<p>Junit has a set of assertions based on the type of comparison - for example compare two strings, or show that they are not equal.</p>
+<p>&nbsp;</p>
+<p>See package testDrivenDevelopment</p>
+<h2 style="margin-left: 0cm; text-indent: 0cm; tab-stops: 36.0pt;">Part 3 Interacting with Users Mid Test</h2>
+<p>It is possible in a test suite to interact with users during a test case, using a scanner for example. A simple example is as shown below using a buffered reader.</p>
+<p>See Package userInteractionMidTest</p>
+
+
+</A> 
+</body>
+</html>
